@@ -8,7 +8,8 @@ class Solution(object):
         """
         # This creates a hash table where key = index, value = element
         # For example: {0:2, 1:7, 2:11, 3:15}
-        my_hash_table = {}
+        my_hash_table = {} # class 'dist'
+        print(type(my_hash_table))
         for i in range(len(nums)):
             my_hash_table[i] = nums[i]
 
@@ -17,6 +18,7 @@ class Solution(object):
         # and sees if their corresponding numbers add up to the target.
         for i in range(len(nums)):
             for k, v in my_hash_table.items():
+                print(f"Key: {k}, Value: {v}")
                 if i != k and nums[i] + v == target:
                     return [i, k]
         # If no pair is found, None is returned (not required for LeetCode, but good practice to handle)
@@ -30,6 +32,7 @@ class OptimalSolution(object):
         :rtype: List[int]
         """
         my_hash_table = {}
+        
         for i in range(len(nums)):
             finder = target - nums[i]
 
