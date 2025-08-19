@@ -1,9 +1,14 @@
-*.dSYM
-# Ignore all files in StarterCodes/MyC++ that do NOT have an extension
-StarterCodes/MyC++/*
-# But do NOT ignore .cpp, .h, or .hpp files
-!StarterCodes/MyC++/*.cpp
-!StarterCodes/MyC++/*.h
-!StarterCodes/MyC++/*.hpp
-.DS_Store
 .vscode/
+.DS_Store
+*.dSYM/
+
+# executables at repo root
+/02_stack_heap
+/03_const
+/04_overload_defaults
+/05_swap
+/06_const_param
+/07_template_function_example
+/hello
+/pointer_and_references
+/polymorphism
