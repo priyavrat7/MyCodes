@@ -6,3 +6,4 @@ StarterCodes/MyC++/*
 !StarterCodes/MyC++/*.h
 !StarterCodes/MyC++/*.hpp
 .DS_Store
+.vscode/
