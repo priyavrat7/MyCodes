@@ -1,0 +1,8 @@
+*.dSYM
+# Ignore all files in StarterCodes/MyC++ that do NOT have an extension
+StarterCodes/MyC++/*
+# But do NOT ignore .cpp, .h, or .hpp files
+!StarterCodes/MyC++/*.cpp
+!StarterCodes/MyC++/*.h
+!StarterCodes/MyC++/*.hpp
+.DS_Store
