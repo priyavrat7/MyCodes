@@ -17,6 +17,8 @@ int main(){
     int x = 10;
     int* ptr = &x; // int* is a pointer to an int, &x gives the memory address of x
     int& ref = x; // int& is a reference to an int, reference is an alias of the variable x and 
+    
+    
     // not ref and x are the name of the same memory location, ref is not a new variable
     // any changes to ref will be made to x and vice versa
     // we can not make ref to refer to a different variable after initialization 

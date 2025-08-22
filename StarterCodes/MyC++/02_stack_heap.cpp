@@ -16,6 +16,8 @@ struct Point{
     }
 };
 
+
+
 int main(){
     // Stack allocation
     Point a(1, 2);

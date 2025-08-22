@@ -1,3 +1,12 @@
+/*
+Why to prefer const arguments over non-const arguments?
+
+Prevents modification: compiler rejects accidental changes to inputs.
+Wider usability: accepts const objects and temporaries (rvalues).
+Performance (for large types): pass by const reference avoids copies (e.g., const std::string&).
+Documents intent: signals “read-only” parameter.
+*/
+
 #include <iostream>
 #include<string>
 using namespace std;
