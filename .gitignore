@@ -7,3 +7,4 @@
 !/StarterCodes/MyC++/*.cpp
 !/StarterCodes/MyC++/*.h
 !/StarterCodes/MyC++/*.hpp
+**/build/
