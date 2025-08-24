@@ -13,8 +13,10 @@ class Singleton{
     private:
         Singleton() {}; // private constructor
 
+        // Make the copy constructor a deleted function
         Singleton(const Singleton&) = delete; // removing the copy constructor
 
+        // Make the copy assignmenet operator a deleted function.
         Singleton& operator=(const Singleton&) = delete; // removing the assignment operator
 
     public:
@@ -35,6 +37,8 @@ class Singleton{
 };
 
 int main(){
+
+    // Since getInstance() function is static, we can call it without creating an object of the class
     Singleton& s1 = Singleton::getInstance();
     s1.data = 10;
     cout << "s1.data = " << s1.data << endl;
