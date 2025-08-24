@@ -49,10 +49,5 @@
     const Person test_print_const("Test_Const", 100); // It will not work if the print function is not const
     test_print_const.print();
 
-
-
-
-
-    
     return 0;
  }

@@ -1,6 +1,32 @@
 #include <iostream>
 #include <vector>
 
+/*
+UML Diagram for Singleton class:
+
++-------------------+
+|    Singleton      |
++-------------------+
+| - Singleton()     |
+| - Singleton(const Singleton&) = delete |
+| - operator=(const Singleton&) = delete |
+|-------------------|
+| + data: int       |
+| + getInstance(): Singleton& |
+| + showMessage(): void       |
++-------------------+
+
+Notes:
+- '-' denotes private members.
+- '+' denotes public members.
+- The constructor is private to prevent direct instantiation.
+- Copy constructor and assignment operator are deleted to prevent copying.
+- getInstance() is a static public method that returns a reference to the single instance.
+- data is a public member variable for demonstration.
+- showMessage() is a public method.
+*/
+
+
 using namespace std;
 
 /* Singleton Design Pattern:

@@ -65,10 +65,5 @@ int main() {
     - Use heap objects only when you need the object to outlive the current scope or require 
       dynamic lifetime management.
     */
-
-    
-
-
-
     return 0;
 }

@@ -43,11 +43,6 @@ int main(){
         cout << i << " ";
     }
 
-
-
-
-    
-
     // auto deduces vector<int>::iterator
     // Benefits of iterator-based loops:
     // 1. Iterators provide a generic way to traverse containers, regardless of their underlying implementation (vector, list, set, etc.).
@@ -56,8 +51,12 @@ int main(){
     // 4. They enable use of standard algorithms (like std::find, std::sort) which operate on iterator ranges.
     // 5. Iterators can be used to traverse only a subrange of a container, offering more flexibility.
     // 6. They make code more generic and reusable, as algorithms can be written for any container supporting iterators.
+    cout << endl;
+
     for (auto it = v.begin(); it != v.end(); ++it){
-        cout << *it << " ";
+        //cout << "it: " << it << endl; // Invalid because iterator doesn't support << operator
+        cout << "v[" << it - v.begin() << "]";
+        cout << " = " << *it << endl;
     } 
 
     cout << endl;
