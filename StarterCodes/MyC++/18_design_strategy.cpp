@@ -8,6 +8,48 @@ const double BASE = 100.0;
 
 using namespace std;
 
+/*
+Strategy Pattern UML Diagram (as implemented in this file):
+
++-------------------+           +---------------------+
+|   Payment         |<----------| CreditCardPayment   |
+|-------------------|           +---------------------+
+| +pay(amount):void |           | +pay(amount):void   |
+|-------------------|           +---------------------+
+| <<interface>>     |
++-------------------+           +---------------------+
+        ^                       | DebitCardPayment    |
+        |                       +---------------------+
+        |                       | +pay(amount):void   |
+        |                       +---------------------+
+        |                       +---------------------+
+        |                       | PayPalPayment       |
+        |                       +---------------------+
+        |                       | +pay(amount):void   |
+        |                       +---------------------+
+        |                       +---------------------+
+        |                       | GiftCardPayment     |
+        |                       +---------------------+
+        |                       | +pay(amount):void   |
+        |                       +---------------------+
+        |
++----------------------+
+|  PaymentProcessor    |
++----------------------+
+| -payment: Payment*   |
++----------------------+
+| +processPayment()    |
++----------------------+
+
+Legend:
+- Payment is the Strategy interface (abstract class with pure virtual function).
+- CreditCardPayment, DebitCardPayment, PayPalPayment, GiftCardPayment are Concrete Strategies implementing Payment.
+- PaymentProcessor is the Context, which uses a Payment strategy to process payments.
+
+The context (PaymentProcessor) is configured with a Payment strategy at runtime and delegates the payment processing to the strategy object.
+*/
+
+
 class Payment{
     public:
         virtual void pay(const double& amount) const = 0;

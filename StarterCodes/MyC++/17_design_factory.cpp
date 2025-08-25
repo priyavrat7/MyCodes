@@ -67,8 +67,6 @@ Legend:
 - <<abstract>> : abstract class (interface)
 */
 
-
-
 class Shape{ // Abstract base class with pure virtual functions behaves as an interface
     public:
         virtual void getShapeType() const = 0;

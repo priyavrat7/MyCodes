@@ -11,8 +11,6 @@ void inc_by_pointer(int *ptr){
 void inc_by_reference(int &ref){
     ref++;
 }
-
-
 int main(){
     int x = 10;
     int* ptr = &x; // int* is a pointer to an int, &x gives the memory address of x
