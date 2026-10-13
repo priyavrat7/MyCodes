@@ -1,0 +1,74 @@
+devices:
+  access_switch:
+    alias: access-sw-01
+    connections:
+      cli:
+        ip: 192.168.1.101
+        port: 22
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco123
+        username: admin
+    os: iosxe
+    platform: cat9k
+    type: switch
+  core_switch:
+    alias: core-sw-01
+    connections:
+      cli:
+        arguments:
+          connection_timeout: 60
+          init_config_commands: []
+          init_exec_commands: []
+        ip: 192.168.1.100
+        port: 22
+        protocol: ssh
+    credentials:
+      default:
+        password: cisco123
+        username: admin
+      enable:
+        password: enable123
+    custom:
+      model: C9300-24T
+      version: 16.12.05
+    os: iosxe
+    platform: cat9k
+    type: switch
+  router:
+    alias: edge-rtr-01
+    connections:
+      cli:
+        ip: 192.168.1.1
+        port: 23
+        protocol: telnet
+    credentials:
+      default:
+        password: cisco123
+        username: admin
+    os: iosxe
+    platform: isr
+    type: router
+testbed:
+  alias: lab_testbed
+  name: cisco_network_testbed
+topology:
+  access_switch:
+    interfaces:
+      GigabitEthernet1/0/1:
+        link: link_1
+        type: ethernet
+  core_switch:
+    interfaces:
+      GigabitEthernet1/0/1:
+        link: link_1
+        type: ethernet
+      GigabitEthernet1/0/2:
+        link: link_2
+        type: ethernet
+  router:
+    interfaces:
+      GigabitEthernet0/0/0:
+        link: link_2
+        type: ethernet
