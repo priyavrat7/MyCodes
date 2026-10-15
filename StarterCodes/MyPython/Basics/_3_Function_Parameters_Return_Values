@@ -1,0 +1,10 @@
+def calculate_total_tokens(input_tokens: int, output_tokens: int) -> int:
+    return input_tokens + output_tokens
+
+total_tokens = calculate_total_tokens(500, 200)
+print(f"Total tokens are: {total_tokens}")
+
+def calculate_tokens(*values: int) -> int:
+    return sum(values)
+
+print(f"Total tokens consumed are: {calculate_tokens(10, 20, 40)}")
